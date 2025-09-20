@@ -1,66 +1,24 @@
-## Foundry
+Role Registration
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+    Producers, quality inspectors, distributors, and retailers are registered on-chain by the contract owner.
+    Each role has unique permissions.
 
-Foundry consists of:
+Product Creation
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+    A producer creates a product, providing details such as name, batch ID, category, production date, and metadataURI (pointing to IPFS/Arweave for extended data).
+    A unique product ID is assigned automatically.
 
-## Documentation
+Quality Assurance
 
-https://book.getfoundry.sh/
+    Producers assign quality inspectors.
+    Inspectors add certifications and approve product quality.
+    Expiry dates and compliance standards are logged immutably.
 
-## Usage
+Ownership Transfer
 
-### Build
+    Products are transferred step-by-step: producer → distributor → retailer → consumer.
 
-```shell
-$ forge build
-```
 
-### Test
+Consumer Trust
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+    Buyers can verify authenticity, check certifications, and see the product’s journey — all directly from the blockchain.
